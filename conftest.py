@@ -8,13 +8,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-@pytest.fixture(scope='function', autouse=True)
+@pytest.fixture(scope='function')
 def mobile_management():
     options = UiAutomator2Options().load_capabilities({
         # Specify device and os_version for testing
         # "platformName": "android",
         "platformVersion": "9.0",
-        "deviceName": "Google Pixel 3",
+        "deviceName": "Google Pixel 3a XL",
 
         # Set URL of the application under test
         "app": "bs://sample.app",
