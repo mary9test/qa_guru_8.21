@@ -14,7 +14,7 @@ def test_search_appium():
         results.first.should(have.text('Appium'))
 
 
-def test_search_python():
+def test_search_pytest():
     with step('Type search'):
         browser.element((AppiumBy.ACCESSIBILITY_ID, "Search Wikipedia")).click()
         browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/search_src_text")).type('Pytest')
